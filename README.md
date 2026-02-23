@@ -3,7 +3,7 @@
 
 ---
 
-## 📋 Requisitos
+## 📋 Requisitos prueva 
 
 | Herramienta | Versión mínima |
 |-------------|---------------|
