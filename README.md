@@ -3,7 +3,7 @@
 
 ---
 
-## 📋 Requisitos prueva 
+## 📋 Requisitos
 
 | Herramienta | Versión mínima |
 |-------------|---------------|
@@ -103,3 +103,9 @@ Instala la extensión **Python** de Microsoft en VS Code para tener:
 - Análisis sintáctico
 - Tabla de símbolos
 - Mensajes de error detallados
+
+
+## 📁 Link del video
+```
+https://www.youtube.com/
+```
