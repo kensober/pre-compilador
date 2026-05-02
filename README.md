@@ -25,7 +25,7 @@ code .
 # 2. Abre la terminal integrada (Ctrl + `)
 
 # 3. Ejecuta
-python microc.py
+python3 microc.py
 ```
 
 ### Opción 2 — Botón ▶ de VS Code
@@ -53,7 +53,7 @@ microc_compiler/
 | 📂 **Abrir** | Carga archivo `*.C` en modo solo lectura |
 | 💾 **Guardar** | Guarda el archivo (diálogo si es nuevo, sobreescribe si ya existe) |
 | ✏️ **Editar** | Habilita edición del archivo abierto |
-| ⚙️ **Compilar** | Placeholder — se desarrollará en próximas entregas |
+| ⚙️ **Compilar** | Ejecuta análisis léxico, tabla de tokens, errores y resumen AFN/AFD |
 | ❓ **Ayuda** | Ventana con documentación y atajos |
 | 🚪 **Salir** | Cierra con aviso si hay cambios sin guardar |
 
@@ -98,11 +98,32 @@ Instala la extensión **Python** de Microsoft en VS Code para tener:
 
 ---
 
-## 🗺️ Próximas entregas
-- Análisis léxico (tokenizador MicroC)
+## 🔬 Alcance académico implementado
+- Definición formal de tokens léxicos
+- Expresiones regulares para `KW`, `ID`, `NUM`, `OP`, `DELIM` y comentarios
+- Construcción de AFN y conversión a AFD para cada token principal
+- Diagramas textuales de AFN y AFD por token
+- Simulación de cadenas mediante tokenización del código fuente
+- Detección de errores léxicos
+
+## 🧩 Tokens reconocidos
+
+| Token | Descripción | Expresión regular |
+|---|---|---|
+| `KW` | Palabras reservadas | `(if\|else\|while\|for\|return\|int\|float\|void\|char)` |
+| `ID` | Identificadores | `[A-Za-z_][A-Za-z0-9_]*` |
+| `NUM` | Enteros no negativos | `0\|[1-9][0-9]*` |
+| `OP` | Operadores | `[\+\-\*/=]` |
+| `DELIM` | Delimitadores | `[(){};,]` |
+| `//` | Comentario de línea | `//[^\n]*` |
+| `/*...*/` | Comentario de bloque | `/\*[\s\S]*?\*/` |
+
+> Soporte auxiliar: el lexer también admite cadenas (`STRING`) para poder analizar ejemplos con `printf`, pero el núcleo académico del informe se centra en los tokens solicitados en el enunciado.
+
+## 🗺️ Próximas extensiones
 - Análisis sintáctico
 - Tabla de símbolos
-- Mensajes de error detallados
+- Mensajes semánticos más detallados
 
 
 ## 📁 Link del video
