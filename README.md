@@ -129,4 +129,6 @@ Instala la extensión **Python** de Microsoft en VS Code para tener:
 ## 📁 Link del video
 ```
 https://youtu.be/Z9zkh2QzElA
+fase 1 y 2 : https://youtu.be/3URJEqSF33Q
+
 ```
